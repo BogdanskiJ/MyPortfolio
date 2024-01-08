@@ -11,4 +11,3 @@ export const Navigation = () => {
 		</StyledNavBox>
 	);
 };
-z;
