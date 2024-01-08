@@ -1,20 +1,28 @@
 import styled from "styled-components";
 
-export const StyledPageBody = styled.div`
-	max-width: 1920px;
-	margin: auto;
+export const StyledNavBox = styled.div`
+	display: flex;
+	width: 100%;
+	height: fit-content;
 `;
 
-export const StyledResults = styled.div`
+export const StyledNav = styled.nav`
 	display: flex;
+	width: 100%;
 	flex-direction: row;
-	align-items: center;
-	align-items: stretch;
-	gap: 10px;
-	margin: 20px;
+	justify-content: space-around;
+	padding: 10px;
+	position: fixed;
+	top: 0;
+	height: fit-content;
+	z-index: 999;
+	background: transparent;
+`;
 
-	@media ((max-width: ${({ theme }) => theme.breakpoint.md})) {
-		flex-direction: column;
-		margin: 20px;
-	}
+export const StyledNavButton = styled.button`
+	display: flex;
+	width: auto;
+	color: #33b198;
+	background: transparent;
+	border: none;
 `;

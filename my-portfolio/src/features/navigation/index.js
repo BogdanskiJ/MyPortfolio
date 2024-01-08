@@ -1,13 +1,14 @@
+import { StyledNav, StyledNavBox, StyledNavButton } from "./styled";
+
 export const Navigation = () => {
 	return (
-		<div>
-			<nav>
-				<ul>
-					<li>Hme</li>
-					<li>GH</li>
-					<li>LKD</li>
-				</ul>
-			</nav>
-		</div>
+		<StyledNavBox>
+			<StyledNav>
+				<StyledNavButton> Home</StyledNavButton>
+				<StyledNavButton> asdasfas</StyledNavButton>
+				<StyledNavButton> asdgasd</StyledNavButton>
+			</StyledNav>
+		</StyledNavBox>
 	);
 };
+z;

@@ -1,20 +1,51 @@
 import styled from "styled-components";
+import p1 from "../../images/projekt6.png";
+import p2 from "../../images/projekt8.png";
+import p3 from "../../images/projekt5.png";
 
-export const StyledPageBody = styled.div`
-	max-width: 1920px;
-	margin: auto;
+export const StyledImageBox = styled.div`
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+	z-index: 2;
+	padding-bottom: 20%;
+`;
+export const StyledDiv = styled.div`
+	position: relative;
+	z-index: 1;
 `;
 
-export const StyledResults = styled.div`
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	align-items: stretch;
-	gap: 10px;
-	margin: 20px;
-
-	@media ((max-width: ${({ theme }) => theme.breakpoint.md})) {
-		flex-direction: column;
-		margin: 20px;
-	}
+export const StyledImage = styled.div`
+	height: 100vh;
+	width: 100%;
+	background-position: top 5% left 6%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 20%;
+	background-image: url(${p1});
+`;
+export const StyledImageShadow = styled.div`
+	height: 100vh;
+	width: 100%;
+	position: absolute;
+`;
+export const StyledImage2 = styled.div`
+	height: 100vh;
+	width: 100%;
+	background-position: top 5% left 6%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 20%;
+	background-image: url(${p2});
+`;
+export const StyledImage3 = styled.div`
+	height: 700vh;
+	width: 100%;
+	background-position: top 5% left 6%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 20%;
+	background-image: url(${p3});
 `;
