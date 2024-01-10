@@ -2,27 +2,34 @@ import styled from "styled-components";
 
 export const StyledNavBox = styled.div`
 	display: flex;
-	width: 100%;
-	height: fit-content;
+	width: 30%;
 `;
 
 export const StyledNav = styled.nav`
 	display: flex;
-	width: 100%;
-	flex-direction: row;
+	width: 30%;
+	flex-direction: column;
 	justify-content: space-around;
-	padding: 10px;
+	padding-top: 40%;
+	padding-left: 5%;
 	position: fixed;
-	top: 0;
-	height: fit-content;
 	z-index: 999;
 	background: transparent;
 `;
 
-export const StyledNavButton = styled.button`
+export const StyledNavUl = styled.ul`
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	font-size: 30px;
+`;
+
+export const StyledNavLi = styled.li`
 	display: flex;
 	width: auto;
-	color: #33b198;
+	color: ${({ theme }) => theme.color.keppel};
 	background: transparent;
 	border: none;
+	cursor: pointer;
 `;
