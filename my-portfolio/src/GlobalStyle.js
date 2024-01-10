@@ -10,11 +10,11 @@ export const GlobalStyle = createGlobalStyle`
 
     body {
         margin: 0 auto;
-        background: ${({ theme }) => theme.color.whisper};
+        background: ${({ theme }) => theme.color.codGray};
         font-family: "Roboto", sans-serif;
     };
     
-    body::-webkit-scrollbar {
+    /* body::-webkit-scrollbar {
         width: 6px;
         height: 6px;
     }
@@ -31,5 +31,5 @@ export const GlobalStyle = createGlobalStyle`
     }
     body::-webkit-scrollbar-thumb:active{
   	    background: ${({ theme }) => theme.color.blackOpacity05};
-    }
+    } */
 `;
