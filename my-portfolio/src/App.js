@@ -1,13 +1,16 @@
 import "./App.css";
+import { FaceSlider } from "./features/faceSlider";
 import { Navigation } from "./features/navigation";
-import { Projects } from "./features/projects";
+import { Page } from "./features/page";
+import { Container } from "./styled";
 
 function App() {
 	return (
-		<div className="appDiv">
+		<Container>
+			<FaceSlider />
 			<Navigation />
-			<Projects />
-		</div>
+			<Page />
+		</Container>
 	);
 }
 
