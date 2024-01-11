@@ -1,14 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
-import { StyledH2, StyledP, StyledPageDiv } from "../styled";
+import React, { useEffect, useRef } from "react";
+import { StyledH2, StyledP } from "../styled";
+import Parallax from "parallax-js";
 import {
 	StyledAboutBox,
 	StyledAboutTextBox,
-	StyledDiv1,
-	StyledDiv2,
-	StyledDiv3,
-	StyledDiv4,
-	StyledDiv5,
-	StyledDiv6,
 	StyledMovingLayer,
 	StyledMovingLayerBox,
 } from "./styled";
@@ -20,33 +15,19 @@ import MovingLayerD from "./images/movingLayerD.png";
 import MovingLayerE from "./images/movingLayerE.png";
 
 export const About = () => {
-	const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-	const containerRef = useRef(null);
-
-	const updateMousePosition = (ev) => {
-		setMousePosition({
-			x: ev.clientX - containerRef.current.offsetLeft,
-			y: ev.clientY - containerRef.current.offsetTop,
-		});
-	};
+	const scene = useRef(null);
 
 	useEffect(() => {
-		const container = containerRef.current;
-		container.addEventListener("mousemove", updateMousePosition);
+		const parallaxInstance = new Parallax(scene.current, {
+			relativeInput: true,
+		});
+	}, [scene]);
 
-		return () => {
-			container.removeEventListener("mousemove", updateMousePosition);
-		};
-	}, []);
-
-	const calculateTransform = (index) => {
-		// Różne skale przekształcenia dla różnych obrazów
-		const scale = 1 + index * 0.05;
-		return `translate(${mousePosition.x * scale}px, ${
-			mousePosition.y * scale
-		}px)`;
-	};
-
+	console.log(scene.current);
+	// const scene = document.querySelector("#scene");
+	// const parallaxInstance = new Parallax(scene, {
+	// 	relativeInput: true,
+	// });
 	return (
 		<StyledAboutBox id="about">
 			<StyledAboutTextBox>
@@ -59,19 +40,17 @@ export const About = () => {
 					problem with your website, please email me and I will try to help.
 				</StyledP>
 			</StyledAboutTextBox>
-			<StyledMovingLayerBox>
-				<StyledMovingLayer src={MovingLayerA}></StyledMovingLayer>
-				<StyledMovingLayer src={MovingLayerB}></StyledMovingLayer>
-				<StyledMovingLayer src={MovingLayerC}></StyledMovingLayer>
-				<StyledMovingLayer src={MovingLayerD}></StyledMovingLayer>
-				<StyledMovingLayer src={MovingLayerE}></StyledMovingLayer>
+			<StyledMovingLayerBox ref={scene}>
+				<StyledMovingLayer data-depth="0.2" src={MovingLayerA} />
+
+				<StyledMovingLayer data-depth="0.4" src={MovingLayerB} />
+
+				<StyledMovingLayer data-depth="0.6" src={MovingLayerC} />
+
+				<StyledMovingLayer data-depth="0.8" src={MovingLayerD} />
+
+				<StyledMovingLayer data-depth="0.1" src={MovingLayerE} />
 			</StyledMovingLayerBox>
-			{/* <StyledDiv1></StyledDiv1>
-			<StyledDiv2></StyledDiv2>
-			<StyledDiv3></StyledDiv3>
-			<StyledDiv4></StyledDiv4>
-			<StyledDiv5></StyledDiv5>
-			<StyledDiv6></StyledDiv6> */}
 		</StyledAboutBox>
 	);
 };
