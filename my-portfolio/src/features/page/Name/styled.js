@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const StyledName = styled.div`
 	width: fit-content;
 	overflow: hidden;
+	z-index: 999;
 `;
 
 export const StyledH1 = styled.h1`

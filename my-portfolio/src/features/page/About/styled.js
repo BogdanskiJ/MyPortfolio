@@ -6,7 +6,6 @@ export const StyledAboutBox = styled.div`
 	display: flex;
 	flex-direction: row;
 	position: relative;
-	overflow: hidden;
 	max-height: 100vh;
 `;
 export const StyledAboutTextBox = styled.div`
@@ -16,46 +15,16 @@ export const StyledAboutTextBox = styled.div`
 	z-index: 1;
 	height: 100vh;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: flex-start;
 	background: ${({ theme }) => theme.color.codGray};
-`;
-
-export const StyledDiv1 = styled.div`
-	background: #1b1b1b;
-	height: 40px;
-	width: 200px;
-`;
-export const StyledDiv2 = styled.div`
-	background: #33b198;
-	height: 40px;
-	width: 200px;
-`;
-export const StyledDiv3 = styled.div`
-	background: #e4523b;
-	height: 40px;
-	width: 200px;
-`;
-export const StyledDiv4 = styled.div`
-	background: #0b454d;
-	height: 40px;
-	width: 200px;
-`;
-export const StyledDiv5 = styled.div`
-	background: #ecc417;
-	height: 40px;
-	width: 200px;
-`;
-export const StyledDiv6 = styled.div`
-	background: #e8931e;
-	height: 40px;
-	width: 200px;
 `;
 
 export const StyledMovingLayerBox = styled.div`
 	/* position: relative; */
 	width: 100vw;
-	height: 100vh;
+	height: 66vh;
+	z-index: 2;
 `;
 
 export const StyledMovingLayer = styled.img`

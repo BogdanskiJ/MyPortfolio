@@ -64,6 +64,6 @@ export const StyledP = styled.p`
 	line-height: 1.5;
 `;
 
-export const StyledPageDiv = styled.div`
+export const StyledPageSection = styled.div`
 	height: 100vh;
 `;

@@ -1,9 +1,9 @@
 import React from "react";
-import { StyledH2, StyledP, StyledPageDiv } from "../styled";
+import { StyledH2, StyledP, StyledPageSection } from "../styled";
 
 export const Contact = () => {
 	return (
-		<StyledPageDiv id="contact">
+		<StyledPageSection id="contact">
 			<StyledH2>Contact</StyledH2>
 			<StyledP>
 				I am a passionate Front-end Developer. I'm always looking for
@@ -12,6 +12,6 @@ export const Contact = () => {
 				applications and all types of websites. If you have any problem with
 				your website, please email me and I will try to help.
 			</StyledP>
-		</StyledPageDiv>
+		</StyledPageSection>
 	);
 };

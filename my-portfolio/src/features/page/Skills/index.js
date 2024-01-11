@@ -1,9 +1,9 @@
 import React from "react";
-import { StyledH2, StyledP, StyledPageDiv } from "../styled";
+import { StyledH2, StyledP, StyledPageSection } from "../styled";
 
 export const Skills = () => {
 	return (
-		<StyledPageDiv id="skills">
+		<StyledPageSection id="skills">
 			<StyledH2>Skills</StyledH2>
 			<StyledP>
 				I am a passionate Front-end Developer. I'm always looking for
@@ -40,6 +40,6 @@ export const Skills = () => {
 				websites. If you have any problem with your website, please email me and
 				I will try to help.
 			</StyledP>
-		</StyledPageDiv>
+		</StyledPageSection>
 	);
 };
