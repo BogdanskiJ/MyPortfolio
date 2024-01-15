@@ -1,4 +1,5 @@
 import {
+	StyledBubbleBox,
 	StyledNav,
 	StyledNavBox,
 	StyledNavBubbleImg,
@@ -10,8 +11,6 @@ import {
 	StyledNavUl,
 } from "./styled";
 import Img1 from "./images/1.png";
-// import Img1 from "./images/2.png";
-// import Img1 from "./images/3.png";
 
 export const Navigation = () => {
 	const handleScroll = (e) => {
@@ -33,6 +32,8 @@ export const Navigation = () => {
 						<StyledNavText href="#about" onClick={handleScroll}>
 							About
 						</StyledNavText>
+					</StyledNavLi>
+					<StyledBubbleBox>
 						<StyledNavSpanSmall>
 							<StyledNavBubbleImg src={Img1} />
 						</StyledNavSpanSmall>
@@ -42,11 +43,14 @@ export const Navigation = () => {
 						<StyledNavSpanBig>
 							<StyledNavBubbleImg src={Img1} />
 						</StyledNavSpanBig>
-					</StyledNavLi>
+					</StyledBubbleBox>
+
 					<StyledNavLi>
 						<StyledNavText href="#myPortfolio" onClick={handleScroll}>
 							My Portfolio
 						</StyledNavText>
+					</StyledNavLi>
+					<StyledBubbleBox>
 						<StyledNavSpanSmall>
 							<StyledNavBubbleImg src={Img1} />
 						</StyledNavSpanSmall>
@@ -56,11 +60,13 @@ export const Navigation = () => {
 						<StyledNavSpanBig>
 							<StyledNavBubbleImg src={Img1} />
 						</StyledNavSpanBig>
-					</StyledNavLi>
+					</StyledBubbleBox>
 					<StyledNavLi>
 						<StyledNavText href="#skills" onClick={handleScroll}>
 							Skills
 						</StyledNavText>
+					</StyledNavLi>
+					<StyledBubbleBox>
 						<StyledNavSpanSmall>
 							<StyledNavBubbleImg src={Img1} />
 						</StyledNavSpanSmall>
@@ -70,11 +76,13 @@ export const Navigation = () => {
 						<StyledNavSpanBig>
 							<StyledNavBubbleImg src={Img1} />
 						</StyledNavSpanBig>
-					</StyledNavLi>
+					</StyledBubbleBox>
 					<StyledNavLi>
 						<StyledNavText href="#education" onClick={handleScroll}>
 							Education
 						</StyledNavText>
+					</StyledNavLi>
+					<StyledBubbleBox>
 						<StyledNavSpanSmall>
 							<StyledNavBubbleImg src={Img1} />
 						</StyledNavSpanSmall>
@@ -84,11 +92,13 @@ export const Navigation = () => {
 						<StyledNavSpanBig>
 							<StyledNavBubbleImg src={Img1} />
 						</StyledNavSpanBig>
-					</StyledNavLi>
+					</StyledBubbleBox>
 					<StyledNavLi>
-						<styledNavText href="#contact" onClick={handleScroll}>
+						<StyledNavText href="#contact" onClick={handleScroll}>
 							Contact
-						</styledNavText>
+						</StyledNavText>
+					</StyledNavLi>
+					<StyledBubbleBox>
 						<StyledNavSpanSmall>
 							<StyledNavBubbleImg src={Img1} />
 						</StyledNavSpanSmall>
@@ -98,7 +108,7 @@ export const Navigation = () => {
 						<StyledNavSpanBig>
 							<StyledNavBubbleImg src={Img1} />
 						</StyledNavSpanBig>
-					</StyledNavLi>
+					</StyledBubbleBox>
 				</StyledNavUl>
 			</StyledNav>
 		</StyledNavBox>
