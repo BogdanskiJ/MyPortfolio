@@ -46,8 +46,10 @@ export const MyPortfolio = () => {
 	useEffect(() => {
 		if (isClicked === true) {
 			document.body.style.overflow = "hidden";
+			document.body.style.marginRight = "6px";
 		} else {
 			document.body.style.overflow = "unset";
+			document.body.style.marginRight = "0";
 		}
 	}, [isClicked]);
 
@@ -109,6 +111,7 @@ export const MyPortfolio = () => {
 				setData={setData}
 				modalLink={modalLink}
 				modalName={modalName}
+				backgroundModalImg={githubSmall}
 			/>
 		</StyledPortfolioSection>
 	);

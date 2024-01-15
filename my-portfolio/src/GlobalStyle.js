@@ -14,22 +14,26 @@ export const GlobalStyle = createGlobalStyle`
         font-family: "Roboto", sans-serif;
     };
     
-    /* body::-webkit-scrollbar {
+    body::-webkit-scrollbar {
         width: 6px;
         height: 6px;
     }
     body::-webkit-scrollbar-track {
         border-radius: 10px;
-        background: ${({ theme }) => theme.color.blackOpacity01};
+        background:red;
+        /* background: ${({ theme }) => theme.color.blackOpacity01}; */
     }
     body::-webkit-scrollbar-thumb{
         border-radius: 10px;
-        background: ${({ theme }) => theme.color.blackOpacity02};
+        background: green;
+        /* background: ${({ theme }) => theme.color.blackOpacity02}; */
     }
     body::-webkit-scrollbar-thumb:hover{
-  	    background: ${({ theme }) => theme.color.blackOpacity04};
+  	    background: blue;
+  	    /* background: ${({ theme }) => theme.color.blackOpacity04}; */
     }
     body::-webkit-scrollbar-thumb:active{
-  	    background: ${({ theme }) => theme.color.blackOpacity05};
-    } */
+  	    background: yellow;
+  	    /* background: ${({ theme }) => theme.color.blackOpacity05}; */
+    }
 `;
