@@ -8,11 +8,11 @@ import {
 	StyledMovingLayerBox,
 } from "./styled";
 
-import MovingLayerA from "./images/movingLayerA.png";
-import MovingLayerB from "./images/movingLayerB.png";
-import MovingLayerC from "./images/movingLayerC.png";
-import MovingLayerD from "./images/movingLayerD.png";
-import MovingLayerE from "./images/movingLayerE.png";
+import Layer1 from "./images/layer1.svg";
+import Layer2 from "./images/layer2.svg";
+import Layer3 from "./images/layer3.svg";
+import Layer4 from "./images/layer4.svg";
+import Layer5 from "./images/layer5.svg";
 
 export const About = () => {
 	const scene = useRef(null);
@@ -23,11 +23,6 @@ export const About = () => {
 		});
 	}, [scene]);
 
-	console.log(scene.current);
-	// const scene = document.querySelector("#scene");
-	// const parallaxInstance = new Parallax(scene, {
-	// 	relativeInput: true,
-	// });
 	return (
 		<StyledAboutBox id="about">
 			<StyledAboutTextBox>
@@ -41,15 +36,15 @@ export const About = () => {
 				</StyledP>
 			</StyledAboutTextBox>
 			<StyledMovingLayerBox ref={scene}>
-				<StyledMovingLayer data-depth="0.2" src={MovingLayerA} />
+				<StyledMovingLayer data-depth="0.2" src={Layer1} />
 
-				<StyledMovingLayer data-depth="0.4" src={MovingLayerB} />
+				<StyledMovingLayer data-depth="0.4" src={Layer2} />
 
-				<StyledMovingLayer data-depth="0.6" src={MovingLayerC} />
+				<StyledMovingLayer data-depth="0.6" src={Layer3} />
 
-				<StyledMovingLayer data-depth="0.8" src={MovingLayerD} />
+				<StyledMovingLayer data-depth="0.8" src={Layer4} />
 
-				<StyledMovingLayer data-depth="0.1" src={MovingLayerE} />
+				<StyledMovingLayer data-depth="0.1" src={Layer5} />
 			</StyledMovingLayerBox>
 		</StyledAboutBox>
 	);
