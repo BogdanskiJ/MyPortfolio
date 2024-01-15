@@ -1,6 +1,7 @@
 export const theme = {
 	color: {
 		codGray: "#1b1b1b",
+		modalTransparent: "#e9e9e9c7",
 		keppel: "#33b198",
 		white: "#ffffff",
 		cinnabar: "#e4523b",
