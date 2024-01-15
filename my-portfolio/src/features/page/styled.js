@@ -14,11 +14,13 @@ export const StyledImageBox = styled.div`
 `;
 export const StyledDiv = styled.div`
 	position: relative;
-	z-index: 1;
+	z-index: 2;
 	width: 70%;
-	padding-right: 10%;
-	top: 200px;
+	padding-right: 10px;
+	top: 10px;
+	/* top: 200px; */
 	/* margin-top: 200px; */
+	overflow: hidden;
 `;
 
 export const StyledImage = styled.div`
@@ -66,4 +68,8 @@ export const StyledP = styled.p`
 
 export const StyledPageSection = styled.div`
 	height: 100vh;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	width: 70vw;
 `;

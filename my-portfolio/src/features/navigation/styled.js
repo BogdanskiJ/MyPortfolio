@@ -10,10 +10,10 @@ export const StyledNav = styled.nav`
 	width: 30%;
 	flex-direction: column;
 	justify-content: space-around;
-	padding-top: 40%;
+	bottom: 0;
 	padding-left: 5%;
 	position: fixed;
-	z-index: 999;
+	z-index: 1;
 	background: transparent;
 `;
 
@@ -27,12 +27,13 @@ export const StyledNavUl = styled.ul`
 
 export const StyledNavText = styled.span`
 	width: 100%;
+	font-size: 3vh;
 `;
 
 export const StyledNavSpanBig = styled.span`
 	display: block;
 	border-radius: 50%;
-	/* right: 0; */
+	transition: transform 0.5s ease;
 	right: 0;
 	z-index: 1;
 	bottom: 50%;
@@ -42,7 +43,6 @@ export const StyledNavSpanBig = styled.span`
 	position: absolute;
 	opacity: 0;
 	transform: scale(0);
-	transition: transform 0.5s ease;
 
 	@media ((max-width: ${({ theme }) => theme.breakpoint.xl})) {
 		height: 110px;
@@ -71,7 +71,7 @@ export const StyledNavSpanBig = styled.span`
 		}
 		100% {
 			opacity: 0;
-			bottom: 100%;
+			bottom: 100px;
 		}
 	}
 
@@ -87,6 +87,7 @@ export const StyledNavSpanBig = styled.span`
 export const StyledNavSpanMedium = styled.span`
 	display: block;
 	border-radius: 50%;
+	transition: transform 0.5s ease;
 	right: -20%;
 	z-index: 2;
 	bottom: -20%;
@@ -96,7 +97,6 @@ export const StyledNavSpanMedium = styled.span`
 	overflow: hidden;
 	opacity: 0;
 	transform: scale(0);
-	transition: transform 0.5s ease;
 
 	@media ((max-width: ${({ theme }) => theme.breakpoint.xl})) {
 		height: 80px;
@@ -125,7 +125,7 @@ export const StyledNavSpanMedium = styled.span`
 		}
 		100% {
 			opacity: 0;
-			bottom: 100%;
+			bottom: 100px;
 		}
 	}
 
@@ -146,6 +146,7 @@ export const StyledNavSpanSmall = styled.span`
 	display: block;
 	border-radius: 50%;
 	width: 60px;
+	transition: transform 0.5s ease;
 	height: 60px;
 	right: -40%;
 	z-index: 3;
@@ -154,7 +155,6 @@ export const StyledNavSpanSmall = styled.span`
 	position: absolute;
 	opacity: 0;
 	transform: scale(0);
-	transition: transform 0.5s ease;
 
 	@media ((max-width: ${({ theme }) => theme.breakpoint.xl})) {
 		height: 50px;
@@ -183,7 +183,7 @@ export const StyledNavSpanSmall = styled.span`
 		}
 		100% {
 			opacity: 0;
-			bottom: 100%;
+			bottom: 100px;
 		}
 	}
 
@@ -202,18 +202,24 @@ export const StyledNavBubbleImg = styled.img`
 	display: block;
 `;
 
+export const StyledBubbleBox = styled.div`
+	position: relative;
+	z-index: 1;
+`;
+
 export const StyledNavLi = styled.li`
 	display: flex;
 	width: auto;
 	color: ${({ theme }) => theme.color.keppel};
 	background: transparent;
 	border: none;
-	cursor: pointer;
 	position: relative;
 	text-transform: uppercase;
 	font-weight: bold;
+	z-index: 2;
+	cursor: pointer;
 
-	&:hover {
+	&:hover + ${StyledBubbleBox} {
 		${StyledNavSpanBig} {
 			transition-delay: 0s;
 			animation-delay: 0s;

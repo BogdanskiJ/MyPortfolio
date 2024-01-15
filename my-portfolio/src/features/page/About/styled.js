@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const StyledAboutBox = styled.div`
-	height: auto;
-	width: 70vw;
+	height: 100vh;
+	/* width: 70vw; */
 	display: flex;
 	flex-direction: row;
 	position: relative;
@@ -13,7 +13,9 @@ export const StyledAboutTextBox = styled.div`
 	padding: 20px;
 	display: flex;
 	z-index: 1;
-	height: 100vh;
+	height: fit-content;
+	position: sticky;
+	top: 10px;
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: flex-start;
@@ -25,6 +27,7 @@ export const StyledMovingLayerBox = styled.div`
 	width: 100vw;
 	height: 66vh;
 	z-index: 2;
+	top: 100px;
 `;
 
 export const StyledMovingLayer = styled.img`
