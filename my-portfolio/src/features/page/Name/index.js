@@ -9,15 +9,13 @@ import {
 
 export const Name = () => {
 	return (
-		<>
-			<StyledName>
-				<StyledH1>
-					Jakub Bogdański<SpanBlink>_</SpanBlink>
-				</StyledH1>
-				<StyledNameSliderDiv>
-					<StyledNameSlider>Frontend Developer</StyledNameSlider>
-				</StyledNameSliderDiv>
-			</StyledName>
-		</>
+		<StyledName>
+			<StyledH1>
+				Jakub Bogdański<SpanBlink>_</SpanBlink>
+			</StyledH1>
+			<StyledNameSliderDiv>
+				<StyledNameSlider>Frontend Developer</StyledNameSlider>
+			</StyledNameSliderDiv>
+		</StyledName>
 	);
 };

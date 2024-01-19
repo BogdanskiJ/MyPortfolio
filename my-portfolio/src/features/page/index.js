@@ -1,21 +1,19 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { StyledDiv } from "./styled";
 import { MyPortfolio } from "./MyPortfolio";
 import { Skills } from "./Skills";
-import { Eductaion } from "./Education";
 import { Contact } from "./Contact";
 import { About } from "./About";
 import { Name } from "./Name";
 
-export const Page = () => {
+export const Page = forwardRef((props, ref) => {
 	return (
-		<StyledDiv>
+		<StyledDiv ref={ref}>
 			<Name />
 			<About />
 			<MyPortfolio />
 			<Skills />
-			<Eductaion />
 			<Contact />
 		</StyledDiv>
 	);
-};
+});

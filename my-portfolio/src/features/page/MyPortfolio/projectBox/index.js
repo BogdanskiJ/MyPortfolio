@@ -7,6 +7,8 @@ import {
 	StyledProjectH2,
 	StyledDescriptionButton2,
 	StyledDescriptionButton3,
+	StyledDescriptionHoverBox,
+	StyledDescriptionText,
 } from "./styled";
 
 export const ProjectBox = ({
@@ -17,6 +19,7 @@ export const ProjectBox = ({
 	typeName,
 	listImage,
 	setData,
+	descriptionText,
 }) => {
 	const [isFullLoaded, setIsFullLoaded] = useState(false);
 	const loaded = () => {
@@ -33,16 +36,13 @@ export const ProjectBox = ({
 				loading="lazy"
 				$isFullLoaded={isFullLoaded}
 			/>
-			<StyledProjectH2>{`${name}`}</StyledProjectH2>
-			<StyledDescriptionBox>
-				{typeName === "E-commerce shop" ? (
+			<StyledDescriptionHoverBox>
+				<StyledProjectH2>{`${name}`}</StyledProjectH2>
+				<StyledDescriptionBox>
+					<StyledDescriptionText>{descriptionText}</StyledDescriptionText>
 					<StyledDescriptionButton>{`${typeName}`}</StyledDescriptionButton>
-				) : typeName === "GHPages" ? (
-					<StyledDescriptionButton2>{`${typeName}`}</StyledDescriptionButton2>
-				) : (
-					<StyledDescriptionButton3>{`${typeName}`}</StyledDescriptionButton3>
-				)}
-			</StyledDescriptionBox>
+				</StyledDescriptionBox>
+			</StyledDescriptionHoverBox>
 		</StyledProjectBox>
 	);
 };

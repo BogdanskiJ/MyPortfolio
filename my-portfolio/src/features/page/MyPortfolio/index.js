@@ -24,14 +24,15 @@ import moviesbrowserSmall from "./images/moviesbrowser-small.webp";
 import moviesbrowserGif from "./images/moviesbrowserGif.gif";
 import github from "./images/github.webp";
 import githubSmall from "./images/github-small.webp";
+import githubGif from "./images/GHRepositiories.gif";
 
 import { PortfolioModal } from "./modal";
 import { ProjectBox } from "./projectBox";
 
 export const MyPortfolio = () => {
 	const [isClicked, setIsClicked] = useState("initial");
-	const [modalImg, setModalImg] = useState(alekubek);
-	const [modalLink, setModalLink] = useState("https://www.alekubek.pl/");
+	const [modalImg, setModalImg] = useState(github);
+	const [modalLink, setModalLink] = useState("https://github.com/BogdanskiJ");
 	const [modalName, setModalName] = useState("");
 
 	const setData = (img, link, name) => {
@@ -47,9 +48,11 @@ export const MyPortfolio = () => {
 		if (isClicked === true) {
 			document.body.style.overflow = "hidden";
 			document.body.style.marginRight = "6px";
+			document.body.style.marginBottom = "6px";
 		} else {
 			document.body.style.overflow = "unset";
 			document.body.style.marginRight = "0";
+			document.body.style.marginBottom = "0";
 		}
 	}, [isClicked]);
 
@@ -74,6 +77,9 @@ export const MyPortfolio = () => {
 					typeName={"E-commerce shop"}
 					listImage={alekubek}
 					setData={setData}
+					descriptionText={
+						"Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quisillum, deleniti nemo in ex quam. Molestiae totam quos vel obcaecatipraesentium sint ad iure, optio, porro error, nemo architecto!"
+					}
 				/>
 				<ProjectBox
 					mainGif={gusdatabseGif}
@@ -85,6 +91,9 @@ export const MyPortfolio = () => {
 					typeName={"GHPages"}
 					listImage={gusdatabase}
 					setData={setData}
+					descriptionText={
+						"Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quisillum, deleniti nemo in ex quam. Molestiae totam quos vel obcaecatipraesentium sint ad iure, optio, porro error, nemo architecto!"
+					}
 				/>
 				<ProjectBox
 					mainGif={moviesbrowserGif}
@@ -94,15 +103,21 @@ export const MyPortfolio = () => {
 					typeName={"GHPages"}
 					listImage={moviesbrowser}
 					setData={setData}
+					descriptionText={
+						"Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quisillum, deleniti nemo in ex quam. Molestiae totam quos vel obcaecatipraesentium sint ad iure, optio, porro error, nemo architecto!"
+					}
 				/>
 				<ProjectBox
-					mainGif={alekubekGif}
+					mainGif={githubGif}
 					url={"https://github.com/BogdanskiJ"}
 					name={"All GitHub Projects"}
 					backgroundImg={githubSmall}
 					typeName={"GH Projects"}
 					listImage={github}
 					setData={setData}
+					descriptionText={
+						"Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quisillum, deleniti nemo in ex quam. Molestiae totam quos vel obcaecatipraesentium sint ad iure, optio, porro error, nemo architecto!"
+					}
 				/>
 			</StyledPortfolioProjectsBox>
 			<PortfolioModal
@@ -111,7 +126,7 @@ export const MyPortfolio = () => {
 				setData={setData}
 				modalLink={modalLink}
 				modalName={modalName}
-				backgroundModalImg={githubSmall}
+				backgroundModalImg={alekubekSmall}
 			/>
 		</StyledPortfolioSection>
 	);

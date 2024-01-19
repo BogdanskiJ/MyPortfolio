@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
 	StyledPortfolioModal,
 	StyledPortfolioModalBox,
@@ -16,25 +16,40 @@ export const PortfolioModal = ({
 	setData,
 	modalLink,
 	modalName,
+	backgroundModalImg,
 }) => {
 	let initialClicked = false;
 	clicked === "initial" ? (initialClicked = true) : (initialClicked = false);
+
+	const [isFullLoaded, setIsFullLoaded] = useState(false);
+	const loaded = () => {
+		setIsFullLoaded(true);
+	};
+
 	return (
 		<StyledPortfolioModalBox
 			$clicked={clicked}
 			$initialClicked={initialClicked}
 			onClick={() => setData(modalImgSrc, modalLink, modalName)}>
-			<StyledPortfolioModal $clicked={clicked}>
-				<StyledPortfolioModalImg src={modalImgSrc} />
+			<StyledPortfolioModal
+				$clicked={clicked}
+				onLoad={() => loaded()}
+				$backgroundModalImg={backgroundModalImg}
+				$isFullLoaded={isFullLoaded}>
+				<StyledPortfolioModalImg
+					src={modalImgSrc}
+					loading="lazy"
+					$isFullLoaded={isFullLoaded}
+				/>
 			</StyledPortfolioModal>
 			<StyledPortfolioModalButton $clicked={clicked}>
 				<StyledPortfolioModalLink
 					href={modalLink}
 					rel="noopener noreferrer"
-					target="_blank">{`Przejdź do strony ${modalName}`}</StyledPortfolioModalLink>
+					target="_blank">{`Go to ${modalName}`}</StyledPortfolioModalLink>
 			</StyledPortfolioModalButton>
 			<StyledPortfolioModalCloseButton $clicked={clicked}>
-				<CloseButton />
+				<CloseButton color={"white"} />
 			</StyledPortfolioModalCloseButton>
 		</StyledPortfolioModalBox>
 	);
