@@ -4,6 +4,9 @@ export const StyledName = styled.div`
 	width: fit-content;
 	overflow: hidden;
 	z-index: 3;
+	margin-bottom: 30px;
+	scroll-snap-align: start;
+	scroll-snap-stop: always;
 `;
 
 export const StyledH1 = styled.h1`

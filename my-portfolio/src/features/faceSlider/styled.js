@@ -9,7 +9,7 @@ export const StyledImageBox = styled.div`
 	top: 0;
 	left: 0;
 	width: 30%;
-	height: auto;
+	height: 100%;
 	z-index: 1;
 `;
 
@@ -19,7 +19,7 @@ export const StyledImage = styled.div`
 	background-position: top 5% left 6%;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-size: 20%;
+	background-size: 15%;
 	background-image: url(${p1});
 `;
 
@@ -29,16 +29,16 @@ export const StyledImage2 = styled.div`
 	background-position: top 5% left 6%;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-size: 20%;
+	background-size: 15%;
 	background-image: url(${p2});
 `;
 
 export const StyledImage3 = styled.div`
-	height: 300vh;
+	height: 200vh;
 	width: 100%;
 	background-position: top 5% left 6%;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-size: 20%;
+	background-size: 15%;
 	background-image: url(${p3});
 `;

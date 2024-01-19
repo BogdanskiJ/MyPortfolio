@@ -4,7 +4,8 @@ export const StyledPortfolioSection = styled.div`
 	position: relative;
 	display: flex;
 	flex-direction: row;
-	/* width: 65vw; */
+	scroll-snap-align: start;
+	scroll-snap-stop: always;
 `;
 
 export const StyledPortfolioTextBox = styled.div`

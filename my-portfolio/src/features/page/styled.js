@@ -18,9 +18,29 @@ export const StyledDiv = styled.div`
 	width: 70%;
 	padding-right: 10px;
 	top: 10px;
-	/* top: 200px; */
-	/* margin-top: 200px; */
-	overflow: hidden;
+
+	scroll-snap-type: y mandatory;
+	overflow: auto;
+	height: 100vh;
+
+	&::-webkit-scrollbar {
+		width: 0;
+		height: 0;
+	}
+	&::-webkit-scrollbar-track {
+		background: none;
+	}
+	&::-webkit-scrollbar-thumb {
+		background: none;
+	}
+	&::-webkit-scrollbar-thumb:hover {
+		background: none;
+	}
+	&::-webkit-scrollbar-thumb:active {
+		background: none;
+	}
+
+	//zjebane scroll snap
 `;
 
 export const StyledImage = styled.div`
