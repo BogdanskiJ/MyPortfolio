@@ -19,21 +19,17 @@ export const GlobalStyle = createGlobalStyle`
         height: 6px;
     }
     body::-webkit-scrollbar-track {
-        border-radius: 10px;
-        background:red;
-        /* background: ${({ theme }) => theme.color.blackOpacity01}; */
+        border-radius: 10px; 
+        background: ${({ theme }) => theme.color.mineShaft};
     }
     body::-webkit-scrollbar-thumb{
-        border-radius: 10px;
-        background: green;
-        /* background: ${({ theme }) => theme.color.blackOpacity02}; */
+        border-radius: 10px; 
+        background: ${({ theme }) => theme.color.doveGray};
     }
-    body::-webkit-scrollbar-thumb:hover{
-  	    background: blue;
-  	    /* background: ${({ theme }) => theme.color.blackOpacity04}; */
+    body::-webkit-scrollbar-thumb:hover{ 
+  	    background: ${({ theme }) => theme.color.gray};
     }
-    body::-webkit-scrollbar-thumb:active{
-  	    background: yellow;
-  	    /* background: ${({ theme }) => theme.color.blackOpacity05}; */
+    body::-webkit-scrollbar-thumb:active{ 
+  	    background: ${({ theme }) => theme.color.nobel};
     }
 `;
