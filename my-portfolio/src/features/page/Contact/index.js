@@ -4,8 +4,10 @@ import {
 	StyledContactIconBox,
 	StyledContactSection,
 	StyledContactTextBox,
+	StyledHoverAnchor,
 	StyledIconAnchor,
 	StyledIconBox,
+	StyledIconHoverBox,
 	StyledIconImg,
 } from "./styled";
 import { GitHubIcon } from "./socialMediaIcons/github";
@@ -19,11 +21,8 @@ export const Contact = () => {
 			<StyledContactTextBox>
 				<StyledH2>Contact</StyledH2>
 				<StyledP>
-					I am a passionate Front-end Developer. I'm always looking for
-					opportunities to learn more. I am involved in open-source projects. My
-					experience includes creating responsive e-commerce websites, web
-					applications and all types of websites. If you have any problem with
-					your website, please email me and I will try to help.
+					I am open to job offers and would love to get to know your company. Id
+					you need help with your website, please contact me.
 				</StyledP>
 			</StyledContactTextBox>
 			<StyledContactIconBox>
@@ -34,6 +33,14 @@ export const Contact = () => {
 						target="_blank">
 						<GitHubIcon />
 					</StyledIconAnchor>
+					<StyledIconHoverBox>
+						<StyledHoverAnchor
+							href="https://github.com/BogdanskiJ"
+							rel="noopener noreferrer"
+							target="_blank">
+							GitHub - BogdanskiJ
+						</StyledHoverAnchor>
+					</StyledIconHoverBox>
 				</StyledIconBox>
 				<StyledIconBox>
 					<StyledIconAnchor
@@ -42,6 +49,14 @@ export const Contact = () => {
 						target="_blank">
 						<LinkedInIcon />
 					</StyledIconAnchor>
+					<StyledIconHoverBox>
+						<StyledHoverAnchor
+							href="https://www.linkedin.com/in/jakub-bogdanski-51b64027b/"
+							rel="noopener noreferrer"
+							target="_blank">
+							LinkedIn - Jakub Bogdański
+						</StyledHoverAnchor>
+					</StyledIconHoverBox>
 				</StyledIconBox>
 				<StyledIconBox>
 					<StyledIconAnchor
@@ -50,6 +65,14 @@ export const Contact = () => {
 						target="_blank">
 						<MailIcon />
 					</StyledIconAnchor>
+					<StyledIconHoverBox>
+						<StyledHoverAnchor
+							href="mailto:bogdanskikuba@gmail.com"
+							rel="noopener noreferrer"
+							target="_blank">
+							bogdanskikuba@gmail.com
+						</StyledHoverAnchor>
+					</StyledIconHoverBox>
 				</StyledIconBox>
 				<StyledIconBox>
 					<StyledIconAnchor
@@ -58,6 +81,14 @@ export const Contact = () => {
 						target="_blank">
 						<PhoneIcon />
 					</StyledIconAnchor>
+					<StyledIconHoverBox>
+						<StyledHoverAnchor
+							href="tel:+48881646426"
+							rel="noopener noreferrer"
+							target="_blank">
+							881 646 426
+						</StyledHoverAnchor>
+					</StyledIconHoverBox>
 				</StyledIconBox>
 			</StyledContactIconBox>
 		</StyledContactSection>

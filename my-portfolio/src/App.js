@@ -7,7 +7,6 @@ import { Container } from "./styled";
 
 function App() {
 	const pageRef = useRef(null);
-	console.log(pageRef.current);
 	return (
 		<Container>
 			<FaceSlider />

@@ -61,11 +61,10 @@ export const MyPortfolio = () => {
 			<StyledPortfolioTextBox>
 				<StyledH2>My Portfolio</StyledH2>
 				<StyledP>
-					I am a passionate Front-end Developer. I'm always looking for
-					opportunities to learn more. I am involved in open-source projects. My
-					experience includes creating responsive e-commerce websites, web
-					applications and all types of websites. If you have any problem with
-					your website, please email me and I will try to help.
+					My portfolio Frontend Developer includes the creation of the frontend
+					layer of an online store based on the Shoper platform, several
+					websites and blogs. Additionally, I created interesting applications
+					based on public APIs. You can find most of my projects on my GitHub.
 				</StyledP>
 			</StyledPortfolioTextBox>
 			<StyledPortfolioProjectsBox>

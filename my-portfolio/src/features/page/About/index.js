@@ -29,10 +29,10 @@ export const About = () => {
 				<StyledH2>About me</StyledH2>
 				<StyledP>
 					Hi, I'm Kuba. I'm a passionate Frontend Developer. I'm always looking
-					for opportunities to learn more. I am involved in open-source
-					projects. My experience includes creating responsive e-commerce
-					websites, web applications and all types of websites. If you have any
-					problem with your website, please email me and I will try to help.
+					for opportunities to learn more and more. My experience includes
+					creating applications and websites. I worked in teams but also created
+					independently. I am involved in open-source projects. I used many
+					technologies at work, most ofeten I worked with React.
 				</StyledP>
 			</StyledAboutTextBox>
 			<StyledMovingLayerBox ref={scene}>

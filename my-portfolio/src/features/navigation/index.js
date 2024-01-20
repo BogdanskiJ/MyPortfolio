@@ -10,16 +10,19 @@ import {
 	StyledNavText,
 	StyledNavUl,
 } from "./styled";
-import Img1 from "./images/1.png";
-import Webp1 from "./images/1.webp";
-import Webp2 from "./images/2.webp";
-import Webp3 from "./images/3.webp";
-import Webp4 from "./images/4.webp";
-import Webp5 from "./images/5.webp";
-import Webp6 from "./images/6.webp";
+
 import portfolioImg1 from "./images/alekubek.webp";
 import portfolioImg2 from "./images/gusdatabase.webp";
 import portfolioImg3 from "./images/moviebrowser.webp";
+import contactImg1 from "./images/phone.webp";
+import contactImg2 from "./images/github.webp";
+import contactImg3 from "./images/linkedin.webp";
+import skills1 from "./images/react.webp";
+import skills2 from "./images/redux.webp";
+import skills3 from "./images/js.webp";
+import about1 from "./images/about2.webp";
+import about2 from "./images/about1.webp";
+import about3 from "./images/6.webp";
 
 export const Navigation = ({ pageRef }) => {
 	const handleScroll = (e) => {
@@ -46,13 +49,13 @@ export const Navigation = ({ pageRef }) => {
 					</StyledNavLi>
 					<StyledBubbleBox>
 						<StyledNavSpanSmall>
-							<StyledNavBubbleImg src={Webp4} />
+							<StyledNavBubbleImg src={about1} />
 						</StyledNavSpanSmall>
 						<StyledNavSpanMedium>
-							<StyledNavBubbleImg src={Webp5} />
+							<StyledNavBubbleImg src={about2} />
 						</StyledNavSpanMedium>
 						<StyledNavSpanBig>
-							<StyledNavBubbleImg src={Webp6} />
+							<StyledNavBubbleImg src={about3} />
 						</StyledNavSpanBig>
 					</StyledBubbleBox>
 					<StyledNavLi>
@@ -78,13 +81,13 @@ export const Navigation = ({ pageRef }) => {
 					</StyledNavLi>
 					<StyledBubbleBox>
 						<StyledNavSpanSmall>
-							<StyledNavBubbleImg src={Img1} />
+							<StyledNavBubbleImg src={skills2} />
 						</StyledNavSpanSmall>
 						<StyledNavSpanMedium>
-							<StyledNavBubbleImg src={Img1} />
+							<StyledNavBubbleImg src={skills3} />
 						</StyledNavSpanMedium>
 						<StyledNavSpanBig>
-							<StyledNavBubbleImg src={Img1} />
+							<StyledNavBubbleImg src={skills1} />
 						</StyledNavSpanBig>
 					</StyledBubbleBox>
 					<StyledNavLi>
@@ -94,13 +97,13 @@ export const Navigation = ({ pageRef }) => {
 					</StyledNavLi>
 					<StyledBubbleBox>
 						<StyledNavSpanSmall>
-							<StyledNavBubbleImg src={Img1} />
+							<StyledNavBubbleImg src={contactImg1} />
 						</StyledNavSpanSmall>
 						<StyledNavSpanMedium>
-							<StyledNavBubbleImg src={Img1} />
+							<StyledNavBubbleImg src={contactImg3} />
 						</StyledNavSpanMedium>
 						<StyledNavSpanBig>
-							<StyledNavBubbleImg src={Img1} />
+							<StyledNavBubbleImg src={contactImg2} />
 						</StyledNavSpanBig>
 					</StyledBubbleBox>
 				</StyledNavUl>
