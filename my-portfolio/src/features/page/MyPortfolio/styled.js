@@ -1,4 +1,5 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
+
 export const StyledPortfolioSection = styled.div`
 	height: 100vh;
 	position: relative;
@@ -6,6 +7,10 @@ export const StyledPortfolioSection = styled.div`
 	flex-direction: row;
 	scroll-snap-align: start;
 	scroll-snap-stop: always;
+
+	@media screen and ((max-width: ${({ theme }) => theme.breakpoint.lg})) {
+		flex-direction: column;
+	}
 `;
 
 export const StyledPortfolioTextBox = styled.div`
@@ -16,15 +21,31 @@ export const StyledPortfolioTextBox = styled.div`
 	height: fit-content;
 	max-width: 40%;
 	padding: 20px;
+
+	@media screen and ((max-width: ${({ theme }) => theme.breakpoint.lg})) {
+		max-width: 100%;
+		position: relative;
+		max-height: 33vh;
+	}
 `;
 
 export const StyledPortfolioProjectsBox = styled.div`
 	display: flex;
 	width: 100vw;
-	height: 95vh;
+	height: 94vh;
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
+	top: 3vh;
+	position: relative;
+
+	@media screen and ((max-width: ${({ theme }) => theme.breakpoint.lg})) {
+		width: 40vw;
+		height: 60vh;
+		top: 2vh;
+		margin-left: auto;
+		margin-right: auto;
+	}
 `;
 
 export const StyledProjectBox = styled.div`

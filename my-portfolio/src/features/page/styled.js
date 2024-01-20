@@ -13,11 +13,12 @@ export const StyledImageBox = styled.div`
 	padding-bottom: 20%;
 `;
 export const StyledDiv = styled.div`
-	position: relative;
-	z-index: 2;
-	width: 70%;
-	padding-right: 10px;
-	top: 10px;
+	position: absolute;
+	z-index: 4;
+	width: 70vw;
+	/* padding-right: 10px; */
+	left: 30vw;
+	top: 0;
 
 	scroll-snap-type: y mandatory;
 	overflow: auto;
@@ -78,12 +79,23 @@ export const StyledImage3 = styled.div`
 
 export const StyledH2 = styled.h2`
 	color: ${({ theme }) => theme.color.white};
+	font-size: 2rem;
+
+	@media screen and ((max-width: ${({ theme }) => theme.breakpoint.lg})) {
+		font-size: 1.5rem;
+	}
 `;
 
 export const StyledP = styled.p`
 	color: ${({ theme }) => theme.color.white};
 	text-align: justify;
 	line-height: 1.5;
+	font-size: 1.2rem;
+
+	@media screen and ((max-width: ${({ theme }) => theme.breakpoint.lg})) {
+		line-height: 1.2;
+		font-size: 0.6rem;
+	}
 `;
 
 export const StyledPageSection = styled.div`

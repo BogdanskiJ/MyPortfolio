@@ -9,6 +9,6 @@ export const StyledMovingIconsBox = styled.div`
 	top: 0;
 	right: 0;
 	z-index: 4;
-	justify-content: space-around;
+	justify-content: space-evenly;
 	align-items: flex-start;
 `;

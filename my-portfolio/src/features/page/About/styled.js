@@ -10,7 +10,12 @@ export const StyledAboutBox = styled.div`
 	overflow: hidden;
 	scroll-snap-align: start;
 	scroll-snap-stop: always;
+
+	@media screen and ((max-width: ${({ theme }) => theme.breakpoint.lg})) {
+		flex-direction: column;
+	}
 `;
+
 export const StyledAboutTextBox = styled.div`
 	max-width: 40%;
 	padding: 20px;
@@ -23,6 +28,11 @@ export const StyledAboutTextBox = styled.div`
 	justify-content: flex-start;
 	align-items: flex-start;
 	background: ${({ theme }) => theme.color.codGray};
+
+	@media screen and ((max-width: ${({ theme }) => theme.breakpoint.lg})) {
+		max-width: 100%;
+		max-height: 33vh;
+	}
 `;
 
 export const StyledMovingLayerBox = styled.div`
@@ -31,6 +41,14 @@ export const StyledMovingLayerBox = styled.div`
 	z-index: 2;
 	top: 15vh;
 	left: 5vw;
+
+	@media screen and ((max-width: ${({ theme }) => theme.breakpoint.lg})) {
+		width: 66vw;
+		height: 60vh;
+		max-height: 66vh;
+		top: 10vh;
+		left: 0;
+	}
 `;
 
 export const StyledMovingLayer = styled.img`
@@ -38,4 +56,8 @@ export const StyledMovingLayer = styled.img`
 	width: 100%;
 	right: 0;
 	height: 100%;
+
+	@media screen and ((max-width: ${({ theme }) => theme.breakpoint.lg})) {
+		height: 50vh;
+	}
 `;

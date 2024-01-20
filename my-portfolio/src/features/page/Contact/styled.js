@@ -10,6 +10,10 @@ export const StyledContactSection = styled.div`
 	overflow: hidden;
 	scroll-snap-align: start;
 	scroll-snap-stop: always;
+
+	@media screen and ((max-width: ${({ theme }) => theme.breakpoint.lg})) {
+		flex-direction: column;
+	}
 `;
 
 export const StyledContactTextBox = styled.div`
@@ -24,28 +28,72 @@ export const StyledContactTextBox = styled.div`
 	justify-content: flex-start;
 	align-items: flex-start;
 	background: ${({ theme }) => theme.color.codGray};
+
+	@media screen and ((max-width: ${({ theme }) => theme.breakpoint.lg})) {
+		max-width: 100%;
+		position: relative;
+	}
 `;
 
 export const StyledContactIconBox = styled.div`
 	width: 100vw;
-	height: 100vh;
+	height: 94vh;
 	z-index: 2;
+	top: 3vh;
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
-	padding: 20px 0;
 	gap: 20px;
+
+	@media screen and ((max-width: ${({ theme }) => theme.breakpoint.lg})) {
+		flex-direction: column;
+		align-items: flex-start;
+		height: fit-content;
+	}
 `;
 
 export const StyledIconBox = styled.div`
 	display: flex;
-	justify-content: space-around;
+	justify-content: flex-start;
 	align-items: center;
-	transition: all 0.4s ease-out;
+	transition: all 0.3s ease-out;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	width: 70%;
+	width: fit-content;
+`;
+export const StyledIconHoverBox = styled.div`
+	height: 80%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	visibility: hidden;
+	color: white;
+	transition: all 0.2s ease-in-out;
+	font-size: 20px;
+	font-weight: bold;
+	padding-left: 0;
+	transform: translateX(-3vw);
+	z-index: 1;
+	padding-left: 0;
+	text-align: center;
+
+	&:hover {
+		opacity: 1;
+		visibility: visible;
+		padding-left: 6vw;
+	}
+`;
+
+export const StyledHoverAnchor = styled.a`
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-decoration: none;
+	color: currentColor;
 `;
 
 export const StyledIconAnchor = styled.a`
@@ -53,6 +101,14 @@ export const StyledIconAnchor = styled.a`
 	justify-content: space-between;
 	align-items: center;
 	width: fit-content;
+	z-index: 2;
+	transition: 0.2s ease-in-out;
+
+	&:hover + ${StyledIconHoverBox} {
+		opacity: 1;
+		visibility: visible;
+		padding-left: 6vw;
+	}
 `;
 
 export const StyledIconImg = styled.svg`

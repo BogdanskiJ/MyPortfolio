@@ -63,7 +63,7 @@ export const StyledProjectH2 = styled.h2`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	box-shadow: 0px 0px 5px 0px white;
+	box-shadow: 0px 0px 3px 0px white;
 	width: 100%;
 	text-align: center;
 	z-index: 3;

@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const StyledNavBox = styled.div`
 	display: flex;
 	width: 30%;
+	z-index: 4;
 `;
 
 export const StyledNav = styled.nav`
@@ -15,19 +16,24 @@ export const StyledNav = styled.nav`
 	position: fixed;
 	z-index: 1;
 	background: transparent;
+	pointer-events: none;
 `;
 
 export const StyledNavUl = styled.ul`
 	padding: 0;
 	display: flex;
 	flex-direction: column;
-	gap: 10px;
-	font-size: 30px;
+	gap: 3vh;
+	pointer-events: none;
 `;
 
 export const StyledNavText = styled.span`
-	width: 100%;
-	font-size: 3vh;
+	width: fit-content;
+	/* font-size: 3vh; */
+	font-size: clamp(1rem, 2vw, 5rem);
+	max-width: 33vw;
+	cursor: pointer;
+	pointer-events: auto;
 `;
 
 export const StyledNavSpanBig = styled.span`
@@ -217,7 +223,7 @@ export const StyledNavLi = styled.li`
 	text-transform: uppercase;
 	font-weight: bold;
 	z-index: 2;
-	cursor: pointer;
+	pointer-events: none;
 
 	&:hover + ${StyledBubbleBox} {
 		${StyledNavSpanBig} {

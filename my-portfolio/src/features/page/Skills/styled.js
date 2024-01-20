@@ -8,6 +8,10 @@ export const StyledSkillsSection = styled.div`
 	position: relative;
 	scroll-snap-align: start;
 	scroll-snap-stop: always;
+
+	@media screen and ((max-width: ${({ theme }) => theme.breakpoint.lg})) {
+		flex-direction: column;
+	}
 `;
 export const StyledSkillsTextBox = styled.div`
 	display: flex;
@@ -17,15 +21,30 @@ export const StyledSkillsTextBox = styled.div`
 	height: fit-content;
 	max-width: 40%;
 	padding: 20px;
+
+	@media screen and ((max-width: ${({ theme }) => theme.breakpoint.lg})) {
+		max-width: 100%;
+		position: relative;
+		max-height: 33vh;
+	}
 `;
 
 export const StyledSkillsBox = styled.div`
-	width: 100vw;
-	height: 95vh;
+	width: 100%;
+	height: 94vh;
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
 	position: relative;
+	top: 3vh;
+
+	@media screen and ((max-width: ${({ theme }) => theme.breakpoint.lg})) {
+		width: 40vw;
+		height: 60vh;
+		top: 2vh;
+		margin-left: auto;
+		margin-right: auto;
+	}
 `;
 export const StyledTrail = styled.div`
 	position: absolute;

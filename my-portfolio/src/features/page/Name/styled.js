@@ -11,13 +11,21 @@ export const StyledName = styled.div`
 
 export const StyledH1 = styled.h1`
 	color: ${({ theme }) => theme.color.white};
-	font-size: 48px;
+	font-size: 3rem;
 	margin-bottom: 0;
+	@media screen and ((max-width: ${({ theme }) => theme.breakpoint.lg})) {
+		font-size: 1.5rem;
+	}
 `;
 
 export const SpanBlink = styled.span`
 	opacity: 1;
 	animation: blinking 1s infinite;
+	font-size: 3rem;
+
+	@media screen and ((max-width: ${({ theme }) => theme.breakpoint.lg})) {
+		font-size: 1.5rem;
+	}
 
 	@keyframes blinking {
 		0% {
@@ -39,6 +47,11 @@ export const StyledNameSliderDiv = styled.div`
 	width: 100%;
 	display: flex;
 	flex-direction: row;
+	font-size: 1rem;
+
+	@media screen and ((max-width: ${({ theme }) => theme.breakpoint.lg})) {
+		font-size: 0.6rem;
+	}
 `;
 
 export const StyledNameSlider = styled.span`
@@ -52,7 +65,7 @@ export const StyledNameSlider = styled.span`
 			transform: translateX(100%);
 		}
 		100% {
-			transform: translateX(-38%);
+			transform: translateX(-36%);
 		}
 	}
 `;

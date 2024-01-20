@@ -1,10 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import { StyledH2, StyledP } from "../styled";
 import {
 	StyledSkillsBox,
 	StyledSkillsSection,
 	StyledSkillsTextBox,
-	StyledTrail,
 } from "./styled";
 
 import css3 from "./images/css3.svg";
@@ -24,26 +23,28 @@ export const Skills = () => {
 		{ img: html5, name: "html5" },
 		{ img: chartJs, name: "chartJs" },
 	];
-	const [trail, setTrail] = useState({ x: 0, y: 0 });
 
-	const handleMouseTrail = (e) => {
-		const newTrail = { x: e.clientX, y: e.clientY };
-		setTrail(newTrail);
+	const [mouseOver, setMouseOver] = useState(false);
+
+	const handleMouseOver = () => {
+		setMouseOver(!mouseOver);
 	};
 
 	return (
-		<StyledSkillsSection id="skills">
+		<StyledSkillsSection id="skills" onMouseOver={handleMouseOver}>
 			<StyledSkillsTextBox>
 				<StyledH2>Skills</StyledH2>
 				<StyledP>
-					I am a passionate Front-end Developer. I'm always looking for
-					opportunities to learn more. I am involved in open-source projects. My
-					experience includes c websites. If you have any problem with your
-					website, please email me and I will try to help.
+					I use many modern tools, frameworks and libraries. In my project I
+					used React, JavaScript, Redux, Styled Components, ChartJS and many
+					other. You can check the tools I used and the way I used them in my
+					projects on GitHub.
 				</StyledP>
 			</StyledSkillsTextBox>
-			<StyledSkillsBox onMouseMove={handleMouseTrail}>
-				<MovingIcons $iconsArray={iconsArray}></MovingIcons>
+			<StyledSkillsBox>
+				<MovingIcons
+					$iconsArray={iconsArray}
+					$mouseOver={mouseOver}></MovingIcons>
 			</StyledSkillsBox>
 		</StyledSkillsSection>
 	);

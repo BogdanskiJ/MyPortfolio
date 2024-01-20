@@ -19,6 +19,9 @@ export const StyledIcon = styled.img`
 	aspect-ratio: 1;
 	left: 0;
 	z-index: 4;
+	@media screen and ((max-width: ${({ theme }) => theme.breakpoint.lg})) {
+		height: 4vh;
+	}
 `;
 
 export const StyledIconName = styled.div`
@@ -30,17 +33,26 @@ export const StyledIconName = styled.div`
 	transition: 2s ease;
 	color: ${({ theme }) => theme.color.keppel};
 	z-index: 5;
-	font-size: 3vh;
+	font-size: 2rem;
 	font-weight: bold;
+
+	@media screen and ((max-width: ${({ theme }) => theme.breakpoint.lg})) {
+		font-size: 1rem;
+	}
 `;
 
 export const StyledIconBox = styled.div`
 	display: flex;
 	flex-direction: row;
+	align-items: center;
 	width: 100%;
 	position: relative;
 	height: ${(props) => `${props.$iconWidth}px`};
 	min-height: 6vh;
+
+	@media screen and ((max-width: ${({ theme }) => theme.breakpoint.lg})) {
+		height: 3vh;
+	}
 
 	${StyledIcon} {
 		animation: ${(props) =>
@@ -64,7 +76,7 @@ export const StyledIconBox = styled.div`
 			transform: translateY(0) rotateX(0deg);
 		}
 		50% {
-			transform: translateY(100%) rotateX(60deg);
+			transform: translateY(200%) rotateX(60deg);
 			color: ${({ theme }) => theme.color.dixie};
 		}
 		100% {
