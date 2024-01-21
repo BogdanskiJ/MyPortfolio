@@ -9,6 +9,7 @@ import {
 	StyledDescriptionButton3,
 	StyledDescriptionHoverBox,
 	StyledDescriptionText,
+	StyledDescriptionHeader,
 } from "./styled";
 
 export const ProjectBox = ({
@@ -37,7 +38,9 @@ export const ProjectBox = ({
 				$isFullLoaded={isFullLoaded}
 			/>
 			<StyledDescriptionHoverBox>
-				<StyledProjectH2>{`${name}`}</StyledProjectH2>
+				<StyledDescriptionHeader>
+					<StyledProjectH2>{`${name}`}</StyledProjectH2>
+				</StyledDescriptionHeader>
 				<StyledDescriptionBox>
 					<StyledDescriptionText>{descriptionText}</StyledDescriptionText>
 					<StyledDescriptionButton>{`${typeName}`}</StyledDescriptionButton>
