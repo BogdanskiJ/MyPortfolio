@@ -77,7 +77,7 @@ export const MyPortfolio = () => {
 					listImage={alekubek}
 					setData={setData}
 					descriptionText={
-						"Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quisillum, deleniti nemo in ex quam. Molestiae totam quos vel obcaecatipraesentium sint ad iure, optio, porro error, nemo architecto!"
+						"Online store with ceramic items. The project included navigation, menu, product presentatiom modules any many other things."
 					}
 				/>
 				<ProjectBox
@@ -91,7 +91,7 @@ export const MyPortfolio = () => {
 					listImage={gusdatabase}
 					setData={setData}
 					descriptionText={
-						"Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quisillum, deleniti nemo in ex quam. Molestiae totam quos vel obcaecatipraesentium sint ad iure, optio, porro error, nemo architecto!"
+						"An application for easy and intuitive viewing of data collected by the Central Statistical Office."
 					}
 				/>
 				<ProjectBox
@@ -103,7 +103,7 @@ export const MyPortfolio = () => {
 					listImage={moviesbrowser}
 					setData={setData}
 					descriptionText={
-						"Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quisillum, deleniti nemo in ex quam. Molestiae totam quos vel obcaecatipraesentium sint ad iure, optio, porro error, nemo architecto!"
+						"An application to browse a database of movies, popular movies and actors and film producers."
 					}
 				/>
 				<ProjectBox
@@ -114,9 +114,7 @@ export const MyPortfolio = () => {
 					typeName={"GH Projects"}
 					listImage={github}
 					setData={setData}
-					descriptionText={
-						"Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quisillum, deleniti nemo in ex quam. Molestiae totam quos vel obcaecatipraesentium sint ad iure, optio, porro error, nemo architecto!"
-					}
+					descriptionText={"All projects I have created or participated in."}
 				/>
 			</StyledPortfolioProjectsBox>
 			<PortfolioModal
