@@ -50,6 +50,7 @@ export const StyledContactIconBox = styled.div`
 		flex-direction: column;
 		align-items: flex-start;
 		height: fit-content;
+		padding: 20px;
 	}
 `;
 
@@ -94,6 +95,11 @@ export const StyledHoverAnchor = styled.a`
 	align-items: center;
 	text-decoration: none;
 	color: currentColor;
+	font-size: 1rem;
+
+	@media screen and ((max-width: ${({ theme }) => theme.breakpoint.lg})) {
+		font-size: 0.7rem;
+	}
 `;
 
 export const StyledIconAnchor = styled.a`

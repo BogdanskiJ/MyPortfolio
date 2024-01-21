@@ -8,6 +8,7 @@ export const StyledSvgGH = styled.svg`
 	align-content: center;
 	justify-content: center;
 	align-items: center;
+	min-width: 40px;
 
 	& g {
 		fill: none;
@@ -55,6 +56,7 @@ export const StyledSvgLinkedin = styled.svg`
 	align-content: center;
 	justify-content: center;
 	align-items: center;
+	min-width: 40px;
 
 	& g {
 		fill: none;
@@ -103,6 +105,7 @@ export const StyledSvgMail = styled.svg`
 	align-content: center;
 	justify-content: center;
 	align-items: center;
+	min-width: 40px;
 
 	& g {
 		fill: none;
@@ -151,6 +154,7 @@ export const StyledSvgPhone = styled.svg`
 	align-content: center;
 	justify-content: center;
 	align-items: center;
+	min-width: 40px;
 
 	& g {
 		fill: none;

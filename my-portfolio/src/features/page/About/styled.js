@@ -27,7 +27,8 @@ export const StyledAboutTextBox = styled.div`
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: flex-start;
-	background: ${({ theme }) => theme.color.codGray};
+	background: transparent;
+	/* background: ${({ theme }) => theme.color.codGray}; */
 
 	@media screen and ((max-width: ${({ theme }) => theme.breakpoint.lg})) {
 		max-width: 100%;
@@ -43,8 +44,9 @@ export const StyledMovingLayerBox = styled.div`
 	left: 5vw;
 
 	@media screen and ((max-width: ${({ theme }) => theme.breakpoint.lg})) {
-		width: 66vw;
+		width: 50vw;
 		height: 60vh;
+		margin: auto;
 		max-height: 66vh;
 		top: 10vh;
 		left: 0;

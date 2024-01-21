@@ -29,7 +29,6 @@ export const StyledPortfolioProjectsBox = styled.div`
 export const StyledDescriptionHoverBox = styled.div`
 	width: 100%;
 	height: 100%;
-	margin: auto;
 	z-index: 3;
 	opacity: 0;
 	visibility: hidden;
@@ -39,6 +38,7 @@ export const StyledDescriptionHoverBox = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	position: relative;
 `;
 
 export const StyledProjectBoxImage = styled.img`
@@ -58,17 +58,31 @@ export const StyledProjectBoxImage = styled.img`
 export const StyledProjectH2 = styled.h2`
 	color: ${({ theme }) => theme.color.white};
 	background: ${({ theme }) => theme.color.codGray};
-	min-height: 40px;
+	min-height: 30px;
+	height: fit-content;
 	text-align: center;
+	margin: 0;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	box-shadow: 0px 0px 3px 0px white;
 	width: 100%;
 	text-align: center;
 	z-index: 3;
 	transition: 0.3s ease-in-out;
 	transform: translateY(-100px);
+	position: relative;
+	top: 0;
+	box-shadow: 0px 3px 6px 0px #33af96;
+
+	@media screen and ((max-width: ${({ theme }) => theme.breakpoint.lg})) {
+		opacity: 1;
+		visibility: visible;
+		transform: translateY(0);
+		min-height: 20px;
+		font-size: 1rem;
+		box-shadow: 0px 0px 6px 0px #33af96;
+	}
+
 	&:hover {
 		background: ${({ theme }) => theme.color.mineShaft};
 	}
@@ -82,18 +96,31 @@ export const StyledDescriptionBox = styled.div`
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	gap: 10px;
-	width: 50%;
+	width: 100%;
 	cursor: pointer;
 	z-index: 3;
-	transition: 0.3s ease-in-out;
-	transform: translateY(100px);
+	height: 100%;
+
+	@media screen and ((max-width: ${({ theme }) => theme.breakpoint.lg})) {
+		/* width: 100%;
+		gap: 0;
+		font-size: 0.7rem;
+		transform: translateY(0); */
+		display: none;
+	}
 `;
 
 export const StyledDescriptionText = styled.span`
 	color: ${({ theme }) => theme.color.codGray};
 	font-weight: bold;
 	text-align: center;
+	height: 100%;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+	transition: 0.3s ease-in-out;
+	transform: translateY(100px);
 `;
 
 export const StyledDescriptionButton = styled.button`
@@ -102,6 +129,9 @@ export const StyledDescriptionButton = styled.button`
 	border-radius: 5px;
 	border: none;
 	cursor: pointer;
+	transition: 0.3s ease-in-out;
+	transform: translateY(-100px);
+	margin-bottom: 5px;
 `;
 export const StyledDescriptionButton2 = styled.button`
 	color: ${({ theme }) => theme.color.white};
@@ -126,7 +156,7 @@ export const StyledDescriptionImage = styled.img`
 
 export const StyledProjectBox = styled.div`
 	display: flex;
-	height: 25vh;
+	height: 100%;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-evenly;
@@ -138,7 +168,6 @@ export const StyledProjectBox = styled.div`
 	cursor: pointer;
 	position: relative;
 	z-index: 1;
-	border-radius: 10px;
 	transition: 0.3s ease-in-out;
 
 	&:hover {
@@ -152,7 +181,10 @@ export const StyledProjectBox = styled.div`
 		${StyledProjectH2} {
 			transform: translate(0);
 		}
-		${StyledDescriptionBox} {
+		${StyledDescriptionText} {
+			transform: translateY(0);
+		}
+		${StyledDescriptionButton} {
 			transform: translateY(0);
 		}
 	}
@@ -176,4 +208,15 @@ export const StyledProjectBox = styled.div`
 			background-color: rgba(255, 255, 255, 0.2);
 		}
 	}
+`;
+
+export const StyledDescriptionHeader = styled.div`
+	display: flex;
+	align-items: flex-start;
+	align-content: flex-start;
+	justify-content: center;
+	width: 100%;
+	height: fit-content;
+	position: relative;
+	top: 0;
 `;

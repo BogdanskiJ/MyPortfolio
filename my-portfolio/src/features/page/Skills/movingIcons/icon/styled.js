@@ -20,7 +20,7 @@ export const StyledIcon = styled.img`
 	left: 0;
 	z-index: 4;
 	@media screen and ((max-width: ${({ theme }) => theme.breakpoint.lg})) {
-		height: 4vh;
+		height: 6vh;
 	}
 `;
 
@@ -33,11 +33,13 @@ export const StyledIconName = styled.div`
 	transition: 2s ease;
 	color: ${({ theme }) => theme.color.keppel};
 	z-index: 5;
-	font-size: 2rem;
+	font-size: 1.6rem;
 	font-weight: bold;
-
+	@media screen and ((max-width: ${({ theme }) => theme.breakpoint.xl})) {
+		font-size: 1.4rem;
+	}
 	@media screen and ((max-width: ${({ theme }) => theme.breakpoint.lg})) {
-		font-size: 1rem;
+		font-size: 1.2rem;
 	}
 `;
 

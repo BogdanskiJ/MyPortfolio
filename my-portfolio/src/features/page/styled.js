@@ -81,7 +81,17 @@ export const StyledH2 = styled.h2`
 	color: ${({ theme }) => theme.color.white};
 	font-size: 2rem;
 
+	@media screen and ((max-width: ${({ theme }) => theme.breakpoint.xl})) {
+		font-size: 1.7rem;
+	}
 	@media screen and ((max-width: ${({ theme }) => theme.breakpoint.lg})) {
+		font-size: 1.5rem;
+		margin: 0;
+	}
+	@media screen and ((max-width: ${({ theme }) => theme.breakpoint.md})) {
+		font-size: 1.5rem;
+	}
+	@media screen and ((max-width: ${({ theme }) => theme.breakpoint.sm})) {
 		font-size: 1.5rem;
 	}
 `;
@@ -90,11 +100,22 @@ export const StyledP = styled.p`
 	color: ${({ theme }) => theme.color.white};
 	text-align: justify;
 	line-height: 1.5;
-	font-size: 1.2rem;
-
+	font-size: 1.1rem;
+	@media screen and ((max-width: ${({ theme }) => theme.breakpoint.xl})) {
+		line-height: 1.3;
+		font-size: 0.9rem;
+	}
 	@media screen and ((max-width: ${({ theme }) => theme.breakpoint.lg})) {
+		line-height: 1.3;
+		font-size: 0.8rem;
+	}
+	@media screen and ((max-width: ${({ theme }) => theme.breakpoint.md})) {
+		line-height: 1.3;
+		font-size: 0.8rem;
+	}
+	@media screen and ((max-width: ${({ theme }) => theme.breakpoint.sm})) {
 		line-height: 1.2;
-		font-size: 0.6rem;
+		font-size: 0.7rem;
 	}
 `;
 

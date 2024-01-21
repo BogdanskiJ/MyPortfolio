@@ -23,14 +23,14 @@ export const StyledNavUl = styled.ul`
 	padding: 0;
 	display: flex;
 	flex-direction: column;
-	gap: 3vh;
+	/* gap: 3vh; */
 	pointer-events: none;
 `;
 
 export const StyledNavText = styled.span`
 	width: fit-content;
-	/* font-size: 3vh; */
-	font-size: clamp(1rem, 2vw, 5rem);
+	font-size: clamp(1rem, 1.6vw, 5rem);
+	/* font-size: clamp(1rem, 1.6vw, 5rem); */
 	max-width: 33vw;
 	cursor: pointer;
 	pointer-events: auto;
@@ -210,7 +210,7 @@ export const StyledNavBubbleImg = styled.img`
 
 export const StyledBubbleBox = styled.div`
 	position: relative;
-	z-index: 1;
+	z-index: 5;
 `;
 
 export const StyledNavLi = styled.li`
@@ -224,6 +224,7 @@ export const StyledNavLi = styled.li`
 	font-weight: bold;
 	z-index: 2;
 	pointer-events: none;
+	padding-bottom: 3vh;
 
 	&:hover + ${StyledBubbleBox} {
 		${StyledNavSpanBig} {

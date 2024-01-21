@@ -161,6 +161,12 @@ export const StyledPortfolioModalCloseButton = styled.button`
 	cursor: pointer;
 	transition: 0.2s ease-in-out;
 
+	@media screen and ((max-width: ${({ theme }) => theme.breakpoint.lg})) {
+		max-width: 20px;
+		max-height: 20px;
+		padding: 4px;
+	}
+
 	&:hover {
 		background: ${({ theme }) => theme.color.brightRed};
 	}
