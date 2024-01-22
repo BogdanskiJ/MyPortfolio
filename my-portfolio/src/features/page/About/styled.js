@@ -44,12 +44,7 @@ export const StyledMovingLayerBox = styled.div`
 	left: 5vw;
 
 	@media screen and ((max-width: ${({ theme }) => theme.breakpoint.lg})) {
-		width: 50vw;
-		height: 60vh;
-		margin: auto;
-		max-height: 66vh;
-		top: 10vh;
-		left: 0;
+		display: none;
 	}
 `;
 
@@ -62,4 +57,20 @@ export const StyledMovingLayer = styled.img`
 	@media screen and ((max-width: ${({ theme }) => theme.breakpoint.lg})) {
 		height: 50vh;
 	}
+`;
+
+export const StyledImageBox = styled.div`
+	display: none;
+
+	@media ((max-width: ${({ theme }) => theme.breakpoint.lg})) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+	}
+`;
+export const StyledImage = styled.img`
+	width: 50%;
+	height: 50%;
 `;

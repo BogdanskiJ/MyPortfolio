@@ -6,6 +6,8 @@ import {
 	StyledAboutTextBox,
 	StyledMovingLayer,
 	StyledMovingLayerBox,
+	StyledImage,
+	StyledImageBox,
 } from "./styled";
 
 import Layer1 from "./images/layer1.svg";
@@ -13,6 +15,7 @@ import Layer2 from "./images/layer2.svg";
 import Layer3 from "./images/layer3.svg";
 import Layer4 from "./images/layer4.svg";
 import Layer5 from "./images/layer5.svg";
+import developerIcon from "./images/developerIcon.svg";
 
 export const About = () => {
 	const scene = useRef(null);
@@ -35,6 +38,9 @@ export const About = () => {
 					technologies at work, most ofeten I worked with React.
 				</StyledP>
 			</StyledAboutTextBox>
+			<StyledImageBox>
+				<StyledImage src={developerIcon} />
+			</StyledImageBox>
 			<StyledMovingLayerBox ref={scene}>
 				<StyledMovingLayer data-depth="0.2" src={Layer1} />
 
