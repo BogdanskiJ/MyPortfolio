@@ -3,6 +3,8 @@ export const theme = {
 		codGray: "#1b1b1b",
 		modalTransparent: "#000000e3",
 		keppel: "#33b198",
+		eucalyptus: "#227766",
+		greenPea: "#174f44",
 		white: "#ffffff",
 		cinnabar: "#e4523b",
 		deepSeaGreen: "#0b454d",
