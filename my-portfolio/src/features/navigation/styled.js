@@ -23,17 +23,23 @@ export const StyledNavUl = styled.ul`
 	padding: 0;
 	display: flex;
 	flex-direction: column;
-	/* gap: 3vh; */
 	pointer-events: none;
 `;
 
 export const StyledNavText = styled.span`
 	width: fit-content;
 	font-size: clamp(1rem, 1.6vw, 5rem);
-	/* font-size: clamp(1rem, 1.6vw, 5rem); */
 	max-width: 33vw;
 	cursor: pointer;
 	pointer-events: auto;
+	transition: 0.3s ease;
+
+	&:hover {
+		color: ${({ theme }) => theme.color.eucalyptus};
+	}
+	&:active {
+		color: ${({ theme }) => theme.color.greenPea};
+	}
 `;
 
 export const StyledNavSpanBig = styled.span`
