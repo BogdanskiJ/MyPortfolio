@@ -40,8 +40,6 @@ export const StyledDiv = styled.div`
 	&::-webkit-scrollbar-thumb:active {
 		background: none;
 	}
-
-	//zjebane scroll snap
 `;
 
 export const StyledImage = styled.div`
