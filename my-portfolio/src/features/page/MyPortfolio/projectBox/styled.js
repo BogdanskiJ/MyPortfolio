@@ -4,7 +4,6 @@ export const StyledPortfolioSection = styled.div`
 	position: relative;
 	display: flex;
 	flex-direction: row;
-	/* width: 65vw; */
 `;
 
 export const StyledPortfolioTextBox = styled.div`
@@ -102,10 +101,6 @@ export const StyledDescriptionBox = styled.div`
 	height: 100%;
 
 	@media screen and ((max-width: ${({ theme }) => theme.breakpoint.lg})) {
-		/* width: 100%;
-		gap: 0;
-		font-size: 0.7rem;
-		transform: translateY(0); */
 		display: none;
 	}
 `;

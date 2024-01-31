@@ -16,7 +16,6 @@ export const StyledDiv = styled.div`
 	position: absolute;
 	z-index: 4;
 	width: 70vw;
-	/* padding-right: 10px; */
 	left: 30vw;
 	top: 0;
 

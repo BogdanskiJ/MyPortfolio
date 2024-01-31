@@ -9,8 +9,6 @@ import {
 export const FaceSlider = () => {
 	return (
 		<StyledImageBox>
-			{/* <StyledImage />
-			<StyledImage2 /> */}
 			<StyledImage3 />
 		</StyledImageBox>
 	);

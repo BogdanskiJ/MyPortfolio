@@ -28,7 +28,6 @@ export const StyledAboutTextBox = styled.div`
 	justify-content: flex-start;
 	align-items: flex-start;
 	background: transparent;
-	/* background: ${({ theme }) => theme.color.codGray}; */
 
 	@media screen and ((max-width: ${({ theme }) => theme.breakpoint.lg})) {
 		max-width: 100%;
